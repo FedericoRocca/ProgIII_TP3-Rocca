@@ -106,12 +106,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap-grid.css" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-4.3.1-dist\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap-4.3.1-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap-4.3.1-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-4.3.1-dist\js\bootstrap.min.js" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\styles.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -124,7 +135,19 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="libman.json" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-4.3.1-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-4.3.1-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap-4.3.1-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap-4.3.1-dist\js\bootstrap.js.map" />
+    <Content Include="bootstrap-4.3.1-dist\js\bootstrap.min.js.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -211,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="img\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
