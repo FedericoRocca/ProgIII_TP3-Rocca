@@ -1,35 +1,10 @@
 ﻿body {
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
 }
 
-.navbarstyle
-{
-    color: white;
-    padding-left: 5px;
-}
-
-.carouselImages {
-    min-height: 200px;
-    max-height: 200px;
-}
-
-.carouselArrows
-{
-    width: 200px;
-}
-
-.inputCodigo {
-    width: 25%;
-}
-
-.carouselContainer {
-    text-align: center;
-}
-
-.carouselDisplay {
-    display: inline-block;
-}
-
-.carouselArrowsColor
-{
-    color: darkgreen;
+footer {
+    position: absolute;
+    bottom: 0;
 }

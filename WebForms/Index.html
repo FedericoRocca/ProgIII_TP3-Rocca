@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Quiero ganar!</title>
     <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -10,71 +10,25 @@
     <link href="./css/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Nagigation bar -->
-    <nav class="navbar navbar-dark bg-dark navbarStyle">
-        <span class="navbar-brand navbarstyle">Quiero ganar!</span>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Quiero ganar!</span>
     </nav>
 
-    <div class="container carouselContainer">
-        <div class="bd-example carouselDisplay">
-            <div id="carouselExampleCaptions" class="carousel slide carouselArrows" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active carouselImages">
-                        <img src="img/CamaSolteros.jpg" class="d-block carouselImages" alt="Cama para solteros">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h7>Cama de solteros</h7>
-                        </div>
-                    </div>
-                    <div class="carousel-item carouselImages">
-                        <img src="img/SetdeCubiertos.jpg" class="d-block carouselImages" alt="Set de cubiertos">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h7>Set de cubiertos</h7>
-                        </div>
-                    </div>
-                    <div class="carousel-item carouselImages">
-                        <img src="img/RobotMaquillador.JPG" class="d-block carouselImages" alt="Robot maquillador">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h7>Robot maquillador</h7>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next carouselArrowsColor" href="#carouselExampleCaptions" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Input -->
     <div class="container">
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Ingresá el código de tu voucher!</label>
-                <input type="text" class="form-control inputCodigo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Código">
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+        <div class="form-group">
+            <label for="txbVoucher"></label>
+            <input type="text" class="form-control" id="txbVoucher" placeholder="Código del voucher" />
+        </div>
+        <button type="submit" class="btn btn-dark" aria-describedby="Voucher">Siguiente</button>
     </div>
 
-    <!-- Footer -->
-    <hr />
-    <footer class="page-footer font-small text-black-50">
-        <div class="footer-copyright text-center py-3">
-            © 2019 Programación III:
-            <a href="https://github.com/FedericoRocca"> Federico Tomás Rocca</a>
-            <br />
-            <a href="https://i.imgflip.com/s5iqi.jpg"> Legales</a>
+    <footer>
+        <div class="container-fluid">
+            <p>Trabajo práctico N° 3 - Programación 3</p>
+            <a href="https://github.com/FedericoRocca">Federico Tomás Rocca</a> - <a href="https://media.makeameme.org/created/legal.jpg">Legales</a>
         </div>
     </footer>
+
 </body>
 </html>
