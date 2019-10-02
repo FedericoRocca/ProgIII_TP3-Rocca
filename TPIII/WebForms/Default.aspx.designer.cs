@@ -10,7 +10,7 @@
 namespace WebForms {
     
     
-    public partial class _Default {
+    public partial class Premios {
         
         /// <summary>
         /// Control btnSiguiente.
