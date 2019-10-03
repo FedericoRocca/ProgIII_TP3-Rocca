@@ -13,13 +13,13 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%--<webopt:bundlereference runat="server" path="~/Content/css" />--%>
 
-    <link rel="stylesheet" href="..\assets\bootstrap\css\bootstrap.min.css">
+    <link href="..\assets\Icon.png" rel="shortcut icon" type="image/x-icon" />
     <script src="..\assets\jquery-3.4.1.js"></script>
-    <script src="..\assets\popper\popper.js\distpopper.min.js"></script>
-    <script src="..\assets\bootstrap\css\bootstrap.min.js"></script>
+    <script src="..\assets\bootstrap\js\bootstrap.min.js"></script>
+    <script src="..\assets\popper\popper.js\dist\umd\popper.min.js"></script>
+    <link rel="stylesheet" href="..\assets\bootstrap\css\bootstrap.min.css">
 
 </head>
 <body>
