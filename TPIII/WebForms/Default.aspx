@@ -10,11 +10,10 @@
             <div class="form-group" data-toggle="validator">
                 <label for="txbVoucher"></label>
                 <asp:TextBox runat="server" type="text" CssClass="form-control" id="txbVoucher" placeholder="Código del voucher" required="required" />  
-                <%--<input type="text" class="form-control" id="txbVoucher" placeholder="Código del voucher" required="required">--%>
             </div>
             <asp:Button Text="Siguiente" runat="server" type="submit" cssClass="btn btn-dark" aria-describedby="Voucher" id="btnSiguiente" OnClick="btnSiguiente_Click"/>
 
-            <!-- Bootstrap Modal Dialog -->
+            <!-- Bootstrap Modal -->
             <div class="modal" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <asp:UpdatePanel ID="upModal" runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">

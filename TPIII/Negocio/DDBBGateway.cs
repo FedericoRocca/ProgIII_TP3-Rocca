@@ -32,7 +32,6 @@ namespace Negocio
             command.Connection = connection;
             command.Parameters.Clear();
             affectedRows = 0;
-            rowsSelected = 0;
         }
 
         /// <summary>
@@ -96,22 +95,12 @@ namespace Negocio
         /// <summary>
         /// Envía la query a la DDBB. Posterior a prepareQuery().
         /// </summary>
-        public void sendQuery(bool countRows)
+        public void sendQuery()
         {
             try
             {
                 connection.Open();
                 reader = command.ExecuteReader();
-
-                if(countRows == true)
-                {
-                    rowsSelected = 0;
-                    while(reader.Read())
-                    {
-                        rowsSelected++;
-                    }
-                }
-
             }
             catch (Exception ex)
             {

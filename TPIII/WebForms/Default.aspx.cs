@@ -22,14 +22,14 @@ namespace WebForms
             try
             {
                 DDBBGateway DDBB = new DDBBGateway();
+                VouchersNegocio vouch = new VouchersNegocio();
+                List<Vouchers> voucher = new List<Vouchers>();
 
-                DDBB.prepareQuery("select * from Vouchers where Estado = 0 and CodigoVoucher = '" + txbVoucher.Text + "'");
-                DDBB.sendQuery(true);
-
-                if(DDBB.getselectedRows() <= 0)
+                voucher = vouch.getVoucher(txbVoucher.Text);
+                if(voucher.Count == 0)
                 {
                     lblModalTitle.Text = "Voucher no encontrado";
-                    lblModalBody.Text = "El código ingresado no corresponde a un voucher válido, existente o disponible.";
+                    lblModalBody.Text = "El código \"" + txbVoucher.Text + "\" ingresado no corresponde a un voucher válido, existente o disponible.";
                     ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModal", "$('#myModal').modal();", true);
                     upModal.Update();
                 }
@@ -38,10 +38,10 @@ namespace WebForms
                     Response.Redirect("Premios.aspx");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
     }
