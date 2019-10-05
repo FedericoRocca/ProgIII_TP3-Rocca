@@ -17,5 +17,29 @@ namespace Dominio
         public string Ciudad { get; set; }
         public string CodigoPostal { get; set; }
         public DateTime FechaRegistro { get; set; }
+
+        public Cliente(){}
+        public Cliente(
+            Int64 _ID, 
+            int _DNI, 
+            string _Nombre,
+            string _Apellido,
+            string _Email,
+            string _Direccion, 
+            string _Ciudad, 
+            string _CodigoPostal,
+            DateTime _FechaRegistro)
+        {
+            ID = _ID;
+            DNI = _DNI;
+            Nombre = _Nombre;
+            Apellido = _Apellido;
+            Email = _Email;
+            Direccion = _Direccion;
+            Ciudad = _Ciudad;
+            CodigoPostal = _CodigoPostal;
+            FechaRegistro = _FechaRegistro;
+        }
+
     }
 }

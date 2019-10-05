@@ -14,7 +14,6 @@ namespace Negocio
         private SqlCommand command = new SqlCommand();
         private SqlDataReader reader;
         private int affectedRows;
-        private int rowsSelected;
 
         private string connectionString;
 
@@ -40,14 +39,6 @@ namespace Negocio
         public int getAffectedRows()
         {
             return affectedRows;
-        }
-
-        /// <summary>
-        /// Devuelve un Int32 con la cantidad de registros seleccionados luego del sendQuery()
-        /// </summary>
-        public int getselectedRows()
-        {
-            return rowsSelected;
         }
 
         /// <summary>
