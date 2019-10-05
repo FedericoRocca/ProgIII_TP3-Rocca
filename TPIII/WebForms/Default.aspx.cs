@@ -22,8 +22,8 @@ namespace WebForms
             try
             {
                 DDBBGateway DDBB = new DDBBGateway();
-                VouchersNegocio vouch = new VouchersNegocio();
-                List<Vouchers> voucher = new List<Vouchers>();
+                VoucherNegocio vouch = new VoucherNegocio();
+                List<Voucher> voucher = new List<Voucher>();
 
                 voucher = vouch.getVoucher(txbVoucher.Text);
                 if(voucher.Count == 0)

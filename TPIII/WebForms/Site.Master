@@ -4,7 +4,7 @@
 
 <html lang="en">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: null %>Quiero ganar!</title>
@@ -20,7 +20,6 @@
     <script src="..\assets\bootstrap\js\bootstrap.min.js"></script>
     <script src="..\assets\popper\popper.js\dist\umd\popper.min.js"></script>
     <link rel="stylesheet" href="..\assets\bootstrap\css\bootstrap.min.css">
-
 </head>
 <body>
     <form runat="server">
@@ -44,10 +43,17 @@
             </Scripts>
         </asp:ScriptManager>
 
+        <%-- Header --%>
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1">Quiero ganar!</span>
+        </nav>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
+
+            <%-- Footer --%>
             <footer>
                 <p>2019 - Programación III - Trabajo práctico III - <a href="https://github.com/FedericoRocca/ProgIII_TP3-Rocca">Rocca Federico</a></p>
             </footer>

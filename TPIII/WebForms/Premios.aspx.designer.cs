@@ -13,30 +13,12 @@ namespace WebForms {
     public partial class Premios {
         
         /// <summary>
-        /// Control btnPremioUno.
+        /// Control btnProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnPremioUno;
-        
-        /// <summary>
-        /// Control btnPremioDos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnPremioDos;
-        
-        /// <summary>
-        /// Control btnPremioTres.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnPremioTres;
+        protected global::System.Web.UI.WebControls.Button btnProducto;
     }
 }

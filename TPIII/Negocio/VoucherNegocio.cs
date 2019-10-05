@@ -7,16 +7,16 @@ using Dominio;
 
 namespace Negocio
 {
-    public class VouchersNegocio
+    public class VoucherNegocio
     {
-        public List<Vouchers> getVoucher(string voucherCode)
+        public List<Voucher> getVoucher(string voucherCode)
         {
             DDBBGateway DDBB = new DDBBGateway();
 
             DDBB.prepareQuery("select Id, CodigoVoucher, Estado, IdCliente, IdProducto, FechaRegistro from Vouchers where Estado = 0 and CodigoVoucher = '" + voucherCode + "'");
             DDBB.sendQuery();
-            List<Vouchers> vouchersList = new List<Vouchers>();
-            Vouchers aux = new Vouchers();
+            List<Voucher> vouchersList = new List<Voucher>();
+            Voucher aux = new Voucher();
 
             while (DDBB.getReader().Read())
             {

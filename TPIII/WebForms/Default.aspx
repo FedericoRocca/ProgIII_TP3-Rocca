@@ -2,10 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-        <nav class="navbar navbar-dark bg-dark">
-            <span class="navbar-brand mb-0 h1">Quiero ganar!</span>
-        </nav>
-
         <div class="container">
             <div class="form-group" data-toggle="validator">
                 <label for="txbVoucher"></label>

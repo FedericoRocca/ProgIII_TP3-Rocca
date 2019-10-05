@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Vouchers
+    public class Voucher
     {
         public Int64 ID { get; set; }
         public string CodigoVoucher { get; set; }
@@ -15,7 +15,7 @@ namespace Dominio
         public Int32 ? IdProducto { get; set; }
         public DateTime ? FechaRegistro { get; set; }
 
-        public Vouchers(Int64 _ID, string _CodigoVoucher, bool _Estado, Int32 _IdCliente, Int32 _IdProducto, DateTime _FechaRegistro)
+        public Voucher(Int64 _ID, string _CodigoVoucher, bool _Estado, Int32 _IdCliente, Int32 _IdProducto, DateTime _FechaRegistro)
         {
             ID = _ID;
             CodigoVoucher = _CodigoVoucher;
@@ -25,6 +25,6 @@ namespace Dominio
             FechaRegistro = _FechaRegistro;
         }
 
-        public Vouchers(){}
+        public Voucher(){}
     }
 }

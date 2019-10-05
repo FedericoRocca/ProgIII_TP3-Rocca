@@ -26,7 +26,7 @@ namespace Negocio
             /// Desktop-PC
             connectionString = "data source=DESKTOP-BA6HNP1\\SQLEXPRESS01; integrated security=sspi; initial catalog=TP_WEB;";
             /// Notebook-PC
-           // connectionString = "data source=DESKTOP-SI2UFE1\\SQLEXPRESS; integrated security=sspi; initial catalog=CATALOGO_DB;";
+           // connectionString = "data source=DESKTOP-SI2UFE1\\SQLEXPRESS; integrated security=sspi; initial catalog=TP_WEB;";
 
             connection.ConnectionString = connectionString;
             command.Connection = connection;
