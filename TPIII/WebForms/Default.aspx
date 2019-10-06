@@ -9,7 +9,7 @@
                 <div style="margin-top:20px">
                     <asp:RegularExpressionValidator id="rev1" runat="server" SetFocusOnError="True"
                     ErrorMessage="El código del voucher debe tenér 32 dígitos" Display="Dynamic"
-                    ControlToValidate="txbVoucher" ValidationExpression="^.{35}$$" cssClass="alert alert-warning"/>
+                    ControlToValidate="txbVoucher" ValidationExpression="^.{32}$$" cssClass="alert alert-warning"/>
                 </div>
                 
             </div>
