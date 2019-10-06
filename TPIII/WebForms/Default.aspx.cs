@@ -35,13 +35,13 @@ namespace WebForms
                 }
                 else
                 {
-                    Response.Redirect("Premios.aspx");
+                    Response.Redirect("Premios.aspx", false);
                 }
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Session["Error" + Session.SessionID] = ex.Message;
+                Response.Redirect("Error.aspx", false);
             }
         }
     }

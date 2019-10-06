@@ -46,7 +46,7 @@ namespace Negocio
             }
         }
 
-        public void altaCliente(Cliente aux)
+        public bool altaCliente(Cliente aux)
         {
             try
             {
@@ -54,11 +54,41 @@ namespace Negocio
                 data.prepareStatement("" +
                     "INSERT INTO Clientes VALUES ('" + aux.DNI + "', '" + aux.Nombre + "', '" + aux.Apellido + "', '" + aux.Email + "', '" + aux.Direccion + "', '" + aux.Ciudad + "', '" + aux.CodigoPostal + "', '" + DateTime.Now + "')");
                 data.sendStatement();
+                data.closeConnection();
+
+                if (data.getAffectedRows() <= 0)
+                {
+                    return false;
+                }
+                else return true;
+
             }
             catch (Exception ex)
             {
-
                 throw ex;
+            }
+        }
+
+        public bool modificarCliente(Cliente aux)
+        {
+            try
+            {
+                DDBBGateway data = new DDBBGateway();
+                data.prepareStatement("update Clientes set Nombre = '" + aux.Nombre + "', Apellido = '" + aux.Apellido + "', Email = '" + aux.Email + "', Direccion = '" + aux.Direccion + "', Ciudad = '" + aux.Ciudad + "', CodigoPostal = '" + aux.CodigoPostal + "' where DNI = '" + aux.DNI + "'");
+                data.sendStatement();
+                data.closeConnection();
+
+                if (data.getAffectedRows() >= 0)
+                {
+                    return true;
+                }
+                else return false;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 

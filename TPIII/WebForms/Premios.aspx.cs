@@ -22,7 +22,8 @@ namespace WebForms
             }
             catch (Exception ex)
             {
-                throw ex;
+                Session["Error" + Session.SessionID] = ex.Message;
+                Response.Redirect("Error.aspx", false);
             }
         }
 

@@ -112,6 +112,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -125,6 +126,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="IngresoDNI.aspx" />
+    <Content Include="ParticipandoOK.aspx" />
     <Content Include="Premios.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -178,6 +180,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,6 +196,13 @@
     </Compile>
     <Compile Include="IngresoDNI.aspx.designer.cs">
       <DependentUpon>IngresoDNI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParticipandoOK.aspx.cs">
+      <DependentUpon>ParticipandoOK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParticipandoOK.aspx.designer.cs">
+      <DependentUpon>ParticipandoOK.aspx</DependentUpon>
     </Compile>
     <Compile Include="Premios.aspx.cs">
       <DependentUpon>Premios.aspx</DependentUpon>

@@ -33,7 +33,7 @@ namespace WebForms
                 {
                     // Redirijo a form de confirmación completando todos los datos
                     Session["Cliente" + Session.SessionID] = aux[0];
-                    Response.Redirect("ClienteRegistrado.aspx");
+                    Response.Redirect("ClienteRegistrado.aspx", false);
                 }
 
                 
@@ -41,8 +41,8 @@ namespace WebForms
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Session["Error" + Session.SessionID] = ex.Message;
+                Response.Redirect("Error.aspx", false);
             }
         }
     }

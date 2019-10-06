@@ -17,10 +17,10 @@ namespace WebForms
             {
                 txbDNI.Text = Session["DNICliente" + Session.SessionID].ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                Session["Error" + Session.SessionID] = ex.Message;
+                Response.Redirect("Error.aspx", false);
             }
         }
 
@@ -40,13 +40,21 @@ namespace WebForms
                 aux.Email = txbEmail.Text;
                 aux.Nombre = txbNombre.Text;
 
-                clNegocio.altaCliente(aux);
+                if(clNegocio.altaCliente(aux) == false)
+                {
+                    Session["Error" + Session.SessionID] = "Error al crear el cliente";
+                    Response.Redirect("Error.aspx", false);
+                }
+                else
+                {
+                    Response.Redirect("ParticipandoOK.aspx", false);
+                }
 
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Session["Error" + Session.SessionID] = ex.Message;
+                Response.Redirect("Error.aspx", false);
             }
         }
     }
