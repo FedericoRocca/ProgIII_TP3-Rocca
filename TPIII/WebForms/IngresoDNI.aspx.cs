@@ -25,17 +25,18 @@ namespace WebForms
 
                 if (aux.Count <= 0)
                 {
-                    aux = null;
                     // Redirijo a form de registro completando únicamente el DNI
                     Session["DNICliente" + Session.SessionID] = txbDNI.Text;
-                    Session["Cliente" + Session.SessionID] = null;
+                    Response.Redirect("Registro.aspx", false);
                 }
                 else
                 {
+                    // Redirijo a form de confirmación completando todos los datos
                     Session["Cliente" + Session.SessionID] = aux[0];
+                    Response.Redirect("ClienteRegistrado.aspx");
                 }
 
-                Response.Redirect("Registro.aspx");
+                
 
             }
             catch (Exception ex)

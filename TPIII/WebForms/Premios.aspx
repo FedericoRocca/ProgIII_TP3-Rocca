@@ -10,7 +10,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><% = item.Titulo %></h5>
                             <p class="card-text"><% = item.Descripcion %></p>
-                            <asp:Button Text="Lo quiero!" runat="server" CssClass="btn btn-primary btn-block" ID="btnProducto" OnClick="btnProducto_Click" />
+                            <a href="IngresoDNI.aspx?prodID=<% = item.ID %>" class="btn btn-primary btn-block">Lo quiero!</a>
                         </div>
                     </div>
 

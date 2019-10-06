@@ -45,5 +45,22 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public void altaCliente(Cliente aux)
+        {
+            try
+            {
+                DDBBGateway data = new DDBBGateway();
+                data.prepareStatement("" +
+                    "INSERT INTO Clientes VALUES ('" + aux.DNI + "', '" + aux.Nombre + "', '" + aux.Apellido + "', '" + aux.Email + "', '" + aux.Direccion + "', '" + aux.Ciudad + "', '" + aux.CodigoPostal + "', '" + DateTime.Now + "')");
+                data.sendStatement();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
     }
 }

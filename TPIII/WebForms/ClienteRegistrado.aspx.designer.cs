@@ -10,7 +10,7 @@
 namespace WebForms {
     
     
-    public partial class Registro {
+    public partial class ClienteRegistrado {
         
         /// <summary>
         /// Control txbDNI.
