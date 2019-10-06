@@ -11,11 +11,15 @@ namespace WebForms
 {
     public partial class Registro : System.Web.UI.Page
     {
+        string prodID;
+        string vouchId;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
                 txbDNI.Text = Session["DNICliente" + Session.SessionID].ToString();
+                prodID = Session["prodID" + Session.SessionID].ToString();
+                vouchId = Session["vouchId" + Session.SessionID].ToString();
             }
             catch (Exception ex)
             {
@@ -47,6 +51,13 @@ namespace WebForms
                 }
                 else
                 {
+                    VoucherNegocio vouchNegocio = new VoucherNegocio();
+                    ProductoNegocio prodNegocio = new ProductoNegocio();
+
+                    List<Voucher> reg = vouchNegocio.getVoucherByID( Session["IdVoucher" + Session.SessionID].ToString() );
+                    reg[0].IdCliente = clNegocio.getCliente(aux.DNI.ToString())[0].ID;
+                    reg[0].IdProducto = prodNegocio.getProductoByID(prodID.ToString())[0].ID;
+                    vouchNegocio.updateVoucher(reg[0]);
                     Response.Redirect("ParticipandoOK.aspx", false);
                 }
 

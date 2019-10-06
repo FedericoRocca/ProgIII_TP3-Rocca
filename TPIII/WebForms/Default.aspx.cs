@@ -35,6 +35,7 @@ namespace WebForms
                 }
                 else
                 {
+                    Session["IdVoucher" + Session.SessionID] = voucher[0].ID;
                     Response.Redirect("Premios.aspx", false);
                 }
             }

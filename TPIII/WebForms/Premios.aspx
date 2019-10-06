@@ -4,19 +4,20 @@
         <div class="card-columns">
             <% foreach (var item in prods)
                 { %>
-
                     <div class="card">
                         <img src="<% = item.URLImagen %>" class="card-img-top" alt=" <% = item.Titulo %>">
                         <div class="card-body">
                             <h5 class="card-title"><% = item.Titulo %></h5>
                             <p class="card-text"><% = item.Descripcion %></p>
-                            <a href="IngresoDNI.aspx?prodID=<% = item.ID %>" class="btn btn-primary btn-block">Lo quiero!</a>
+                            <a href="IngresoDNI.aspx?idProd=<% = item.ID.ToString() %>&idVouch=<% = vouchCode.ToString() %>" class="btn btn-primary btn-block">Lo quiero!</a>
+
+                           <%-- <a href="IngresoDNI.aspx<% 
+                                Session["IdProducto" + Session.SessionID] = item.ID;
+                                Session["IdVoucher" + Session.SessionID] = vouchCode;
+                                %>" class="btn btn-primary btn-block">Lo quiero!</a>--%>
                         </div>
                     </div>
-
                 <% } %>
-            
-
         </div>
     </div>
 </asp:Content>

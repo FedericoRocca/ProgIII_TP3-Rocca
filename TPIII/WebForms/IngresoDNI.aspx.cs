@@ -11,9 +11,12 @@ namespace WebForms
 {
     public partial class IngresoDNI : System.Web.UI.Page
     {
+        string prodID;
+        string vouchId;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            prodID = Request.QueryString["idProd"];
+            vouchId = Request.QueryString["idVouch"];
         }
 
         protected void btnSiguiente_Click(object sender, EventArgs e)
@@ -22,6 +25,9 @@ namespace WebForms
             {
                 ClienteNegocio cliente = new ClienteNegocio();
                 List<Cliente> aux = cliente.getCliente(txbDNI.Text);
+
+                Session["prodID" + Session.SessionID] = prodID;
+                Session["vouchId" + Session.SessionID] = vouchId;
 
                 if (aux.Count <= 0)
                 {

@@ -13,12 +13,14 @@ namespace WebForms
     {
 
         public List<Producto> prods { get; set; }
+        public Int64 vouchCode;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
                 ProductoNegocio prodNegocio = new ProductoNegocio();
                 prods = prodNegocio.getProductos();
+                vouchCode = Int64.Parse(Session["IdVoucher" + Session.SessionID].ToString());
             }
             catch (Exception ex)
             {

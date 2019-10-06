@@ -6,16 +6,10 @@
         <p>
             Ups! algo salió mal...
             Por favor, informá lo siguiente al administrador del sitio:
-
-
-            <% = Session["Error" + Session.SessionID] %>
-
-
         </p>
-    </div>
-
-    <div class="alert alert-info" role="alert" style="margin-top: 10px">
-        <small>You have been rickrolled</small>
+        <p>
+            <% = Session["Error" + Session.SessionID] %>
+        </p>
     </div>
 
     <div class="embed-responsive embed-responsive-16by9" style="margin-top: 10px">

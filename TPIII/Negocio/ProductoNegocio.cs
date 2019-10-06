@@ -34,5 +34,32 @@ namespace Negocio
                 throw ex;
             }
         }
+
+        public List<Producto> getProductoByID(string _ID)
+        {
+            try
+            {
+                DDBBGateway data = new DDBBGateway();
+                List<Producto> aux = new List<Producto>();
+                data.prepareQuery("select Id, Titulo, Descripcion, URLImagen from Productos where Id = '" + _ID + "'");
+                data.sendQuery();
+                while (data.getReader().Read())
+                {
+                    aux.Add(new Producto(
+                        (Int64)data.getReader()["Id"],
+                        data.getReader()["Titulo"].ToString(),
+                        data.getReader()["Descripcion"].ToString(),
+                        data.getReader()["URLImagen"].ToString()));
+                }
+
+                return aux;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
     }
 }

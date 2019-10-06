@@ -11,6 +11,8 @@ namespace WebForms
 {
     public partial class ClienteRegistrado : System.Web.UI.Page
     {
+        string prodID;
+        string vouchId;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -26,11 +28,13 @@ namespace WebForms
                     txbEmail.Text = reg.Email;
                     txbNombre.Text = reg.Nombre;
                 }
+                prodID = Session["prodID" + Session.SessionID].ToString();
+                vouchId = Session["vouchId" + Session.SessionID].ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                Session["Error" + Session.SessionID] = ex.Message;
+                Response.Redirect("Error.aspx", false);
             }
         }
 
@@ -55,6 +59,14 @@ namespace WebForms
                 }
                 else
                 {
+                    VoucherNegocio vouchNegocio = new VoucherNegocio();
+                    ProductoNegocio prodNegocio = new ProductoNegocio();
+                    ClienteNegocio clNegocio = new ClienteNegocio();
+
+                    List<Voucher> reg = vouchNegocio.getVoucherByID(Session["IdVoucher" + Session.SessionID].ToString());
+                    reg[0].IdCliente = clNegocio.getCliente(cli.DNI.ToString())[0].ID;
+                    reg[0].IdProducto = prodNegocio.getProductoByID(prodID.ToString())[0].ID;
+                    vouchNegocio.updateVoucher(reg[0]);
                     Response.Redirect("ParticipandoOK.aspx", false);
                 }
 

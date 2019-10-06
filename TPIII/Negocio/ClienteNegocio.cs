@@ -32,7 +32,6 @@ namespace Negocio
                         data.getReader()["Ciudad"].ToString(),
                         data.getReader()["CodigoPostal"].ToString(),
                         (DateTime)data.getReader()["FechaRegistro"]
-
                         ));
                 }
 
