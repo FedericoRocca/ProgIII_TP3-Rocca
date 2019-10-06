@@ -6,6 +6,12 @@
             <div class="form-group" data-toggle="validator">
                 <label for="txbVoucher"></label>
                 <asp:TextBox runat="server" type="text" CssClass="form-control" id="txbVoucher" placeholder="Código del voucher" required="required" />  
+                <div style="margin-top:20px">
+                    <asp:RegularExpressionValidator id="rev1" runat="server" SetFocusOnError="True"
+                    ErrorMessage="El código del voucher debe tenér 32 dígitos" Display="Dynamic"
+                    ControlToValidate="txbVoucher" ValidationExpression="^.{35}$$" cssClass="alert alert-warning"/>
+                </div>
+                
             </div>
             <asp:Button Text="Siguiente" runat="server" type="submit" cssClass="btn btn-dark" aria-describedby="Voucher" id="btnSiguiente" OnClick="btnSiguiente_Click"/>
 
