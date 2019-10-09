@@ -1,10 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="WebForms.Registro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <%-- https://docs.microsoft.com/en-us/dotnet/api/system.net.mail.smtpclient.send?view=netframework-4.8 --%>
     <div class="row" style="margin-top: 10px">
         <div class="col">
-            <small class="form-text text-info">El registro es por una única vez.</small>
             <label for="exampleInputEmail1">DNI</label>
             <asp:TextBox runat="server" type="number" CssClass="form-control" ID="txbDNI" placeholder="DNI" ReadOnly="true" required="required" />
             <div style="margin-top: 20px">
@@ -83,6 +82,9 @@
             </div>
         </div>
     </div>
+
+    <small class="form-text text-info">El registro es por una única vez.</small>
+    <small class="form-text text-info">Te enviaremos un mail con el detalle de tu participación.</small>
 
     <asp:Button Text="Confirmar" runat="server" type="submit" CssClass="btn btn-dark" ID="btnSiguiente" Style="margin-top: 20px" OnClick="btnSiguiente_Click" />
 

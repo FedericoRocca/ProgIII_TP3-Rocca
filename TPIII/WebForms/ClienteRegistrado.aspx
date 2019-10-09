@@ -87,6 +87,8 @@
         </div>
     </div>
 
+    <small class="form-text text-info">Te enviaremos un mail con el detalle de tu participación.</small>
+
     <asp:Button Text="Confirmar" runat="server" type="submit" CssClass="btn btn-dark" ID="btnSiguiente" Style="margin-top: 20px" OnClick="btnSiguiente_Click" />
 
 </asp:Content>
